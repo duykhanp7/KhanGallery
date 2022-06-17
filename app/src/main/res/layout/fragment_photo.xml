@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="photo"
+            type="com.example.khangallery.model.Photo" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.PhotoFragment"
+        android:id="@+id/photo_fragment"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="4">
+                    <TextView
+                        android:id="@+id/textTitlePhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{photo.title}"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:layout_marginStart="18dp"/>
+
+                    <TextView
+                        android:id="@+id/textDatePhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{photo.date}"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:layout_marginStart="17dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_change_info"
+                    android:id="@+id/changePhotoInfo"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/background_main_layout"
+                android:elevation="0dp"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                android:id="@+id/cardView"
+                android:visibility="visible">
+
+                <com.jsibbold.zoomage.ZoomageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imagePhotoChild"
+                    loadPhoto="@{photo}"
+                    app:zoomage_restrictBounds="false"
+                    app:zoomage_animateOnReset="true"
+                    app:zoomage_autoResetMode="UNDER"
+                    app:zoomage_autoCenter="true"
+                    app:zoomage_zoomable="true"
+                    app:zoomage_translatable="true"
+                    app:zoomage_minScale="0.6"
+                    app:zoomage_maxScale="10"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>
+

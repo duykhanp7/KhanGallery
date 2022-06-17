@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034373152817",
+    "project_id": "khangallery-b86ef",
+    "storage_bucket": "khangallery-b86ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034373152817:android:d71c5597503e13389e9510",
+        "android_client_info": {
+          "package_name": "com.example.khangallery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034373152817-evs1m1tupeqfbqtghidqs1b6d45dqqfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD40fUuN6sYblKIxuszPGsX-JwOXiqzHo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034373152817-evs1m1tupeqfbqtghidqs1b6d45dqqfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
